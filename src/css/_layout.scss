@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $bg;
+}
+
+.header {}
+
+.header-container {
+
+    .row {
+        display: flex;
+        flex-direction: row;
+
+        .col {
+            flex-grow: 1;
+        }
+    }
+}
+
+.main {}
+
+.footer {}
