@@ -1,0 +1,143 @@
+html {}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    background: $body-bg;
+}
+
+.website {
+    min-width: 320px;
+    max-width: 1920px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background-color: #333333;
+}
+
+.section {
+    margin: 15px 0;
+}
+
+.header {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+}
+
+.main {
+    padding-top: 120px;
+}
+
+.header,
+.section,
+.footer,
+.window-bottom-fixed {
+
+    .container {
+        @include media-breakpoint-only(xxl) {
+            width: 1320px;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-only(xl) {
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-only(lg) {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-only(md) {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-only(sm) {
+            width: 540px;
+            margin: 0 auto;
+        }
+
+        @include media-breakpoint-only(xs) {
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .row {}
+    }
+}
+
+.header-container {
+    max-width: 1920px;
+    min-width: 320px;
+    height: 100px;
+    transition: height 0.3s linear;
+    background-color: #727272;
+}
+
+.section-container {
+    height: 250px;
+    background-color: #4e4e4e;
+}
+
+.footer-container {
+    height: 350px;
+    background-color: #4e4e4e;
+}
+
+.scroll {
+
+    .header-container {
+        height: 55px;
+    }
+}
+
+.window-bottom-fixed {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .container {}
+}
+
+.scroll-to-top-container {
+    display: flex;
+    justify-content: flex-end;
+
+    .item {
+        position: relative;
+    }
+}
+
+.scroll-to-top {
+    display: block;
+
+    opacity: 0.25;
+    transition: opacity 0.5s linear;
+
+    position: absolute;
+    top: -55px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+
+.visible {
+    opacity: 1;
+}
