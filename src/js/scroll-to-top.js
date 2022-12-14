@@ -5,7 +5,9 @@ ev(el('.scroll-to-top > .btn'), 'click', scrollToTop);
 ev(window, 'scroll', scrollToTopButtonVisible);
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
+    // window.scrollTo(0, 0);
+    window.scroll(0, 0);
 }
 
 function scrollToTopButtonVisible() {

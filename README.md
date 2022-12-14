@@ -1,6 +1,6 @@
 # Lending
 ## Prototype for lending page
 
-- scroll fixed header
+- fixed header with action when scroll up
 - move to top button (display when scrolling)
-- indicate top menu item when appropriate section in viewport
+- indicate top menu item when appropriate section on viewport
