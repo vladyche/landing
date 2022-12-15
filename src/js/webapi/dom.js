@@ -1,6 +1,12 @@
-export function ev(obj, event, fn) {
-    if (obj != null) {
-        obj.addEventListener(event, fn);
+export function ev(element, event, fn) {
+    if (element != null) {
+        element.addEventListener(event, fn);
+    }
+}
+
+export function evs(elements, event, fn) {
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener(event, fn);
     }
 }
 

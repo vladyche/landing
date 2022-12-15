@@ -9,7 +9,8 @@ const scrollIndications = (data) => {
 
     for (let i = 0; i < data.length; i++) {
         if ((scroll > data[i].start) && (scroll < data[i].end)) {
-            addActive(menuItems(), i);
+            addDesktopMenuActive(desktopMenuItems(), i);
+            addMobileMenuActive(mobileMenuItems(), i);
             changeUrl(data[i].link);
             return;
         }
@@ -21,7 +22,7 @@ function windowScroll() {
     return window.scrollY + topOffset;
 }
 
-function addActive(elements, element) {
+function addDesktopMenuActive(elements, element) {
     elements[element].classList.add('active');
 
     (function clean() {
@@ -33,12 +34,28 @@ function addActive(elements, element) {
     })();
 }
 
+function addMobileMenuActive(elements, element) {
+    elements[element].classList.add('m-active');
+
+    (function clean() {
+        for (let i = 0; i < elements.length; i++) {
+            if (element != i) {
+                elements[i].classList.remove('m-active');
+            }
+        }
+    })();
+}
+
 function changeUrl(link) {
     window.history.pushState({}, null, link);
 }
 
-function menuItems() {
+function desktopMenuItems() {
     return els('.main-menu > .item');
+}
+
+function mobileMenuItems() {
+    return els('.mobile-menu > .item');
 }
 // end scroll indications
 
