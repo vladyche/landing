@@ -1,5 +1,5 @@
-# Lending
-## Prototype for lending page
+# Landing
+## Prototype for landing page
 
 - fixed header with action when scroll up
 - move to top button (display when scrolling)
