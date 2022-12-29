@@ -1,2 +1,2 @@
-# Lending
-prototype for lending page
+# Landing
+landing page prototype
